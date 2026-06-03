@@ -1,5 +1,5 @@
 # bot-filter
-Matomo Tracking Bot Filter
+## Matomo Tracking Bot Filter
 
 More and more Bots are non-detectable with commonly strategies. Here are few rules to detect bots with PHP. This rules don't detect all bots. Maybe few humans are also filtered with this, when this humans used special or old browsers.
 
