@@ -38,7 +38,7 @@ Check for Headers Keys:
 - `'Accept-Encoding'` must be exist
 
 Specially to filter Direct view with language 'chinese':
-- Direct view and `'Accept-Language'` = 'zh-cn'
+- Direct view with `'Accept-Language'` = 'zh-cn'
 
 Specially for `'Accept-Encoding'`:
 - value `gzip` must be exist
