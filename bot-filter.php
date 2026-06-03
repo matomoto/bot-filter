@@ -3,6 +3,12 @@
 // PHP Rules for Matomo Tracking Bot Filter
 // PHP 8.1 and newer
 
+/*
+#################
+USE WHAT YOU NEED
+#################
+*/
+
 // global bool value
 $mtm_bot_filter_bool = false;
 
