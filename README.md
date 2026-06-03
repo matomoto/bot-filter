@@ -5,6 +5,39 @@ More and more Bots are non-detectable with commonly strategies. Here are few rul
 
 Every bot detecting needs a pattern recognition. Many bots are recognized with patterns.
 
+## PHP Bot Filter
+It is possible to use the Browser User Agent and the Headers to detect bot patterns.
+
+Headers: `getallheaders()` array
+User Agent: `getallheaders()` array key `'User-Agent'`
+User Agent: `$_SERVER['HTTP_USER_AGENT']`
+
+Search for typical bot keywords (needles) in the User Agent:
+- Headless browser keywords
+- typical bot keywords
+- missing of typical characters like `/` and `.`
+
+Check for Headers Keys:
+- `'Accept'` must be exist
+- `'Accept-Language'` must be exist
+- `'Accept-Encoding'` must be exist
+Specially for `'Accept-Encoding'`:
+- value `gzip` must be exist
+- value `deflate` must be exist
+Specially for Non-Opera browser:
+- value `zstd` must be exist
+
+Exclude old browsers with a check for Headers Keys:
+- `'Sec-Fetch-Dest'` must be exist
+- `'Sec-Fetch-Mode'` must be exist
+- `'Sec-Fetch-Site'` must be exist
+Same specially for Chromium based browsers:
+- if (newer) Chromium: `'Sec-Ch-Ua'` must be exist
+Same as a false check for Firefox:
+- if Firefox: `'Sec-Ch-Ua'` don't be exist
+Specially for `'Sec-Fetch-Dest'`:
+- value must be `document`
+
 ## Use the filter rules
 - Save your Matomo JavaScript Tracking Code in a `mtmcode.js` file.
 - Include this file via PHP `include __DIR__ . '/mtmcode.js';` in your webpages.
