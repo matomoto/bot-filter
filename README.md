@@ -20,6 +20,33 @@ And than check your reports manually/visually to search for abnormallities by th
 Make a countercheck with the Visitor IP on: https://www.maxmind.com/en/geoip-demo    
 - Make your own Bot IP Blacklist and use it as a filter in the Dashboard "Global list of Excluded IPs".
 
+- Examples:
+```
+Twitter
+69.12.56.0/21
+
+Sprious
+66.146.232.0/22
+66.146.238.0/23
+141.164.84.0/24
+149.20.240.0/21
+152.44.96.0/22
+152.44.104.0/22
+172.96.89.0/24
+192.171.84.0/22
+199.250.188.0/23
+216.41.232.0/22
+
+LogicWeb
+149.57.176.0/20
+
+Dataport
+141.91.18.128/27
+
+Vodafone Germany Business
+188.111.17.128/25
+```
+
 ## PHP Bot Filter
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
 
