@@ -100,7 +100,7 @@ if (empty($mtm_useragent) === false) {
 	}
 }
 
-// User Agent Character Filter
+// User Agent character filter
 if (str_contains($mtm_useragent, '/') === false) {
 	$mtm_bot_filter_bool = true;
 }
@@ -108,32 +108,32 @@ if (str_contains($mtm_useragent, '.') === false) {
 	$mtm_bot_filter_bool = true;
 }
 
-// Header Accept exist
+// Header 'Accept' exist
 if (array_key_exists('Accept', $mtm_getallheaders_array) === false) {
 	$mtm_bot_filter_bool = true;
 }
 
-// Header Accept - text/html
+// Header 'Accept' - text/html
 if (array_key_exists('Accept', $mtm_getallheaders_array) === true) {
 	if (str_contains(strtolower($mtm_getallheaders_array['Accept']), 'text/html') === false) {
 		$mtm_bot_filter_bool = true;
 	}
 }
 
-// Header Accept-Language - exist
+// Header 'Accept-Language' exist
 if (array_key_exists('Accept-Language', $mtm_getallheaders_array) === false) {
 	$mtm_bot_filter_bool = true;
 }
 
-// Header Accept-Language - exist
+// Header 'Accept-Language' not empty
 if (array_key_exists('Accept-Language', $mtm_getallheaders_array) === true) {
 	if (trim($mtm_getallheaders_array['Accept-Language']) == "") {
 		$mtm_bot_filter_bool = true;
 	}
 }
 
-// Header Accept-Language - zh-CN
-// Referer - ""
+// Header 'Accept-Language' - zh-CN
+// No Referer
 if (array_key_exists('Accept-Language', $mtm_getallheaders_array) === true) {
 	if (str_contains(strtolower($mtm_getallheaders_array['Accept-Language']), 'zh-cn') === true) {
 		if (array_key_exists('Referer', $mtm_getallheaders_array) === false) {
@@ -149,7 +149,7 @@ if (array_key_exists('Referer', $mtm_getallheaders_array) === true) {
 	}
 }
 
-// Header Accept-Encoding - zstd,gzip,deflate,br
+// Header 'Accept-Encoding' - zstd,gzip,deflate,br
 if (array_key_exists('Accept-Encoding', $mtm_getallheaders_array) === true) {
 	if (str_contains(strtolower($mtm_getallheaders_array['Accept-Encoding']), 'gzip') === false) {
 		$mtm_bot_filter_bool = true;
@@ -159,7 +159,7 @@ if (array_key_exists('Accept-Encoding', $mtm_getallheaders_array) === true) {
 	}
 }
 
-// Header Accept-Encoding - zstd,gzip,deflate,br
+// Header 'Accept-Encoding' - zstd,gzip,deflate,br
 // Opera, OPR/
 if ((str_contains($mtm_useragent, 'Opera') === false) && (str_contains($mtm_useragent, 'OPR/') === false)) {
 	if (array_key_exists('Accept-Encoding', $mtm_getallheaders_array) === true) {
@@ -169,21 +169,23 @@ if ((str_contains($mtm_useragent, 'Opera') === false) && (str_contains($mtm_user
 	}
 }
 
-// Header Sec-Fetch-Dest - All Browser
-// Header Sec-Fetch-Mode - All Browser
-// Header Sec-Fetch-Site - All Browser
+// Header 'Sec-Fetch-Dest' exist
+// Header 'Sec-Fetch-Mode' exist
+// Header 'Sec-Fetch-Site' exist
 if ((array_key_exists('Sec-Fetch-Dest', $mtm_getallheaders_array) === false) || (array_key_exists('Sec-Fetch-Mode', $mtm_getallheaders_array) === false) || (array_key_exists('Sec-Fetch-Site', $mtm_getallheaders_array) === false)) {
 	$mtm_bot_filter_bool = true;
 }
 
-// Header Sec-Fetch-Dest - document
+// Header 'Sec-Fetch-Dest' - document
 if (array_key_exists('Sec-Fetch-Dest', $mtm_getallheaders_array) === true) {
 	if (strtolower($mtm_getallheaders_array['Sec-Fetch-Dest']) !== 'document') {
 			$mtm_bot_filter_bool = true;
 	}
 }
 
-// Header Sec-Ch-Ua (Ch: Client Hint, Ua: User Agent)
+// Header 'Sec-Ch-Ua' exist in Chromium
+// Ch: Client Hint
+// Ua: User Agent
 if (array_key_exists('User-Agent', $mtm_getallheaders_array) === true) {
 	if (str_contains(strtolower($mtm_getallheaders_array['User-Agent']), 'chrom') === true) {
 		if (array_key_exists('Sec-Ch-Ua', $mtm_getallheaders_array) === false) {
@@ -192,8 +194,7 @@ if (array_key_exists('User-Agent', $mtm_getallheaders_array) === true) {
 	}
 }
 
-// Header Sec-Ch-Ua - Chrom
-// User-Agent - Firefox
+// Header 'Sec-Ch-Ua' don't exist in Firefox
 if (array_key_exists('Sec-Ch-Ua', $mtm_getallheaders_array) === true) {
 	if (str_contains(strtolower($mtm_getallheaders_array['Sec-Ch-Ua']), 'chrom') === true) {
 		if (array_key_exists('User-Agent', $mtm_getallheaders_array) === true) {
