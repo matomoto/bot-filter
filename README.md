@@ -36,11 +36,14 @@ Check for Headers Keys:
 - `'Accept'` must be exist
 - `'Accept-Language'` must be exist
 - `'Accept-Encoding'` must be exist
+
 Specially to filter Direct view with language 'chinese':
 - Direct view and `'Accept-Language'` = 'zh-cn'
+
 Specially for `'Accept-Encoding'`:
 - value `gzip` must be exist
 - value `deflate` must be exist
+
 Specially for Non-Opera browser:
 - value `zstd` must be exist
 
@@ -48,10 +51,13 @@ Exclude old browsers with a check for Headers Keys:
 - `'Sec-Fetch-Dest'` must be exist
 - `'Sec-Fetch-Mode'` must be exist
 - `'Sec-Fetch-Site'` must be exist
+
 Same specially for Chromium based browsers:
 - if (newer) Chromium: `'Sec-Ch-Ua'` must be exist
+
 Same as a false check for Firefox:
 - if Firefox: `'Sec-Ch-Ua'` don't be exist
+
 Specially for `'Sec-Fetch-Dest'`:
 - value must be `document`
 
