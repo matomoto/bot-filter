@@ -9,7 +9,7 @@ Every bot detecting needs a pattern recognition. Many bots are recognized with p
 The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. The common bots don't have a JavaScript engine.
 
 ## Plugin Track Spam Prevention
-Use the Plugin TrackSpamPrevention.
+Use the Matomo Plugin TrackSpamPrevention.
 
 ## Geolocation
 Use the Matomo Geolocation function in the Dashboard with this:
