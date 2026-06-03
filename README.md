@@ -11,14 +11,14 @@ The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. 
 ## Plugin Track Spam Prevention
 Use the Matomo Plugin TrackSpamPrevention.
 
-## Geolocation
+## Geolocation and ISP - own IP Blacklist
 Use the Matomo Geolocation function in the Dashboard with this:
 - Location Database: `https://download.db-ip.com/free/dbip-city-lite-`[year]`-`[month]`.mmdb.gz`
 - ISP Database: `https://download.db-ip.com/free/dbip-asn-lite-`[year]`-`[month]`.mmdb.gz`
 
 And than check your reports manually/visually to search for abnormallities by the Geolocation and Providers.    
 Make a countercheck with the Visitor IP on: https://www.maxmind.com/en/geoip-demo    
-- Make your own Bot IP collection and use it as a filter in the Dashboard "Global list of Excluded IPs".
+- Make your own Bot IP Blacklist and use it as a filter in the Dashboard "Global list of Excluded IPs".
 
 ## PHP Bot Filter
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
