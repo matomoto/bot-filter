@@ -20,10 +20,13 @@ Activate the Matomo Plugin "Provider".
 
 And than check your reports manually/visually to search for abnormallities by the Geolocation and Providers.    
 Make a countercheck by abnormal visits with the Visitor IP on: https://www.maxmind.com/en/geoip-demo
+
+Table column "Connection Type":
 - "Corporate" = bad
 - "Cable/DSL" = good
+- "Cellular" = good
 
-Make your own Bot IP Blacklist and save it in the Dashboard "Global list of Excluded IPs".
+Copy the IP CIDR (like: 123.45.67.89/24) from the table column "Network". Make your own Bot IP Blacklist and save it in the Dashboard "Global list of Excluded IPs".
 
 The modern bots used random User Agents and random IPs (from IP lists) for every visit.
 
