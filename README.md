@@ -3,7 +3,7 @@
 
 More and more Bots are non-detectable with commonly strategies. Here are few rules to detect bots with PHP. This rules don't detect all bots. Maybe few humans are also filtered with this, when this humans using special or old browsers.
 
-Every bot detecting needs a pattern recognition. Many bots are recognized with patterns.
+Every bot detecting needs a pattern recognition. Many bots are recognizable with patterns.
 
 ## JavaScript Bot Filter
 The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. The common bots don't have a JavaScript engine.
