@@ -51,7 +51,9 @@ Vodafone Germany Business
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
 
 Headers: `getallheaders()` array
+
 User Agent: `getallheaders()` array key `'User-Agent'`
+
 User Agent: `$_SERVER['HTTP_USER_AGENT']`
 
 Search for typical bot keywords (needles) in the User Agent:
@@ -59,7 +61,7 @@ Search for typical bot keywords (needles) in the User Agent:
 - typical bot keywords
 - missing of typical characters like `/` and `.`
 
-Check for Headers Keys:
+Check for Header Keynames:
 - `'Accept'` must be exist
 - `'Accept-Language'` must be exist
 - `'Accept-Encoding'` must be exist
@@ -74,7 +76,7 @@ Specially for `'Accept-Encoding'`:
 Specially for Non-Opera browser:
 - value `zstd` must be exist
 
-Exclude old browsers with a check for Header Keys:
+Exclude old browsers with a check for Header Keynames:
 - `'Sec-Fetch-Dest'` must be exist
 - `'Sec-Fetch-Mode'` must be exist
 - `'Sec-Fetch-Site'` must be exist
