@@ -16,7 +16,7 @@ Use the Matomo Geolocation function in the Dashboard with this:
 - Location Database: `https://download.db-ip.com/free/dbip-city-lite-`[year]`-`[month]`.mmdb.gz`
 - ISP Database: `https://download.db-ip.com/free/dbip-asn-lite-`[year]`-`[month]`.mmdb.gz`
 
-And than check the statistic reports manually/visually to search for abnormallities by the Geolocation and Providers.    
+And than check your reports manually/visually to search for abnormallities by the Geolocation and Providers.    
 Make a countercheck via: https://www.maxmind.com/en/geoip-demo    
 - Make your own Bot IP collection and use it as a filter in the Dashboard "Global list of Excluded IPs".
 
