@@ -12,18 +12,18 @@ The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. 
 Use the Matomo Plugin TrackSpamPrevention.
 
 ## Geolocation / ISP / Provider - own IP Blacklist
-Use the Matomo Geolocation function in the Dashboard with this databases:
+Use the Matomo Geolocation in the Dashboard with this databases:
 - Location Database: `https://download.db-ip.com/free/dbip-city-lite-`[year]`-`[month]`.mmdb.gz`
 - ISP Database: `https://download.db-ip.com/free/dbip-asn-lite-`[year]`-`[month]`.mmdb.gz`
 
 Activate the Matomo Plugin "Provider".
 
 And than check your reports manually/visually to search for abnormallities by the Geolocation and Providers.    
-Make a countercheck by abnormal visits with the Visitor IP on: https://www.maxmind.com/en/geoip-demo    
+Make a countercheck by abnormal visits with the Visitor IP on: https://www.maxmind.com/en/geoip-demo
 - "Corporate" = bad
 - "Cable/DSL" = good
-    
-- Make your own Bot IP Blacklist and save it in the Dashboard "Global list of Excluded IPs".
+
+Make your own Bot IP Blacklist and save it in the Dashboard "Global list of Excluded IPs".
 
 The modern bots used random User Agents and random IPs (from IP lists) for every visit.
 
