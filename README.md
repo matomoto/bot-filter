@@ -48,6 +48,7 @@ Dataport
 Vodafone Germany Business
 188.111.17.128/25
 ```
+Don't hesitate. Companys that used non-detectable bots must be blocked completelly and learn: non-detectable bots are bad — the IP ranges are combust.
 
 ## PHP Bot Filter
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
