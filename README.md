@@ -22,6 +22,8 @@ And than check your reports manually/visually to search for abnormallities by th
 Make a countercheck by abnormal visits with the Visitor IP on: https://www.maxmind.com/en/geoip-demo    
 - Make your own Bot IP Blacklist and save it in the Dashboard "Global list of Excluded IPs".
 
+The modern bots used random User Agent and random IPs (from IP list) for every visit.
+
 Examples of Bot IP CIDRs:
 ```
 Twitter
