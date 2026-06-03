@@ -8,6 +8,17 @@ Every bot detecting needs a pattern recognition. Many bots are recognized with p
 ## JavaScript Bot Filter
 The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. The common bots don't have a JavaScript engine.
 
+## Plugin Track Spam Prevention
+Use the Plugin TrackSpamPrevention.
+
+## Geolocation
+Use the Matomo Geolocation function in the Dashboard with this:
+- Location Database: https://download.db-ip.com/free/dbip-city-lite-`[year]`-`[month]`.mmdb.gz
+- ISP Database: https://download.db-ip.com/free/dbip-asn-lite-`[year]`-`[month]`.mmdb.gz
+And than check the statistic reports manually/visually to search for abnormallities by the Geolocation and Providers.
+Make a countercheck via: https://www.maxmind.com/en/geoip-demo
+- Make your own Bot IP collection and use it as a filter in the Dashboard "Global list of Excluded IPs".
+
 ## PHP Bot Filter
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
 
@@ -24,6 +35,8 @@ Check for Headers Keys:
 - `'Accept'` must be exist
 - `'Accept-Language'` must be exist
 - `'Accept-Encoding'` must be exist
+Specially to filter Direct view with language 'chinese':
+- Direct view and `'Accept-Language'` = 'zh-cn'
 Specially for `'Accept-Encoding'`:
 - value `gzip` must be exist
 - value `deflate` must be exist
