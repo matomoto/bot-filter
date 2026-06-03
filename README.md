@@ -20,7 +20,7 @@ Activate the Matomo Plugin "Provider".
 
 And than check your reports manually/visually to search for abnormallities by the Geolocation and Providers.    
 Make a countercheck by abnormal visits with the Visitor IP on: https://www.maxmind.com/en/geoip-demo    
-- Make your own Bot IP Blacklist and use it as a filter in the Dashboard "Global list of Excluded IPs".
+- Make your own Bot IP Blacklist and use it as a bot filter in the Dashboard "Global list of Excluded IPs".
 
 Examples:
 ```
