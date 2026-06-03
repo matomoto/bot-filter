@@ -5,6 +5,9 @@ More and more Bots are non-detectable with commonly strategies. Here are few rul
 
 Every bot detecting needs a pattern recognition. Many bots are recognized with patterns.
 
+## JavaScript Bot Filter
+The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. The common bots don't have a JavaScript engine.
+
 ## PHP Bot Filter
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
 
