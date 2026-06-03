@@ -47,7 +47,7 @@ Specially for `'Accept-Encoding'`:
 Specially for Non-Opera browser:
 - value `zstd` must be exist
 
-Exclude old browsers with a check for Headers Keys:
+Exclude old browsers with a check for Header Keys:
 - `'Sec-Fetch-Dest'` must be exist
 - `'Sec-Fetch-Mode'` must be exist
 - `'Sec-Fetch-Site'` must be exist
