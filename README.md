@@ -72,6 +72,11 @@ Search for typical bot keywords (needles) in the User Agent:
 - typical bot keywords
 - missing of typical characters like `/` and `.`
 
+Check browser version number (Chromium / Firefox)
+- Grab the number of the browser version number
+- Set a minimum of browser version number
+- Exclude browser versions on the base of the number
+
 Check for Header Keynames:
 - `'Accept'` must be exist
 - `'Accept-Language'` must be exist
