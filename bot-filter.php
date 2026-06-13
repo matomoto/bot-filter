@@ -108,6 +108,37 @@ if (str_contains($mtm_useragent, '.') === false) {
 	$mtm_bot_filter_bool = true;
 }
 
+// Browser Version Chromium
+$mtm_chromium_version_min = 150;
+$mtm_sec_ch_ua_array = array();
+if (array_key_exists('Sec-Ch-Ua', $mtm_getallheaders_array) === true) {
+	$mtm_sec_ch_ua = $mtm_getallheaders_array['Sec-Ch-Ua'];
+	$mtm_sec_ch_ua_explode = explode(',', $mtm_sec_ch_ua);
+	foreach($mtm_sec_ch_ua_explode as $mtm_sec_ch_ua_value) {
+		$mtm_sec_ch_ua_explode_sub = explode(';', $mtm_sec_ch_ua_value);
+		$mtm_sec_ch_ua_array[trim($mtm_sec_ch_ua_explode_sub[0], "\x00..\x2F")] = $mtm_sec_ch_ua_explode_sub[1];
+	}
+	if (array_key_exists('Chromium', $mtm_sec_ch_ua_array) === true) {
+		$mtm_chromium_version = str_replace(array('v', '=', '"'), '', $mtm_sec_ch_ua_array['Chromium']);
+		$mtm_chromium_version_int = intval($mtm_chromium_version);
+		if ($mtm_chromium_version_int < $mtm_chromium_version_min) {
+			$mtm_bot_filter_bool = true;
+		}
+	}
+}
+
+// Browser Version Firefox
+$mtm_firefox_version_min = 150;
+if (empty($mtm_useragent) === false) {
+	$mtm_pattern = '/Firefox\/[0-9]+/';
+	preg_match($mtm_pattern, $mtm_useragent, $mtm_matches);
+	$mtm_firefox_version = str_replace('Firefox/', '', $mtm_matches[0]);
+	$mtm_firefox_version_int = intval($mtm_firefox_version);
+	if ($mtm_firefox_version_int < $mtm_firefox_version_min) {
+		$mtm_bot_filter_bool = true;
+	}
+}
+
 // Header 'Accept' exist
 if (array_key_exists('Accept', $mtm_getallheaders_array) === false) {
 	$mtm_bot_filter_bool = true;
