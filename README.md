@@ -9,8 +9,8 @@ Every bot detecting needs a pattern recognition. Many bots are recognizable with
 The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. The common bots don't have a JavaScript engine.
 
 ## Plugin Track Spam Prevention
-Use the Matomo Plugin TrackSpamPrevention.
-Use in this PlugIn the option `block_geoip_organisations` 
+Use the Matomo Plugin TrackSpamPrevention.    
+Use in this PlugIn the option `block_geoip_organisations`     
 Tutorial: https://forum.matomo.org/t/trackingspamprevention-block-isp/65362
 
 ## Geolocation / ISP / Provider - own IP Blacklist
