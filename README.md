@@ -10,6 +10,8 @@ The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. 
 
 ## Plugin Track Spam Prevention
 Use the Matomo Plugin TrackSpamPrevention.
+Use in this PlugIn the option `block_geoip_organisations` 
+Tutorial: https://forum.matomo.org/t/trackingspamprevention-block-isp/65362
 
 ## Geolocation / ISP / Provider - own IP Blacklist
 Use the Matomo Geolocation in the Dashboard with this databases:
