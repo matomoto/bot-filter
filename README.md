@@ -9,9 +9,7 @@ Every bot detecting needs a pattern recognition. Many bots are recognizable with
 The simplest bot filter is JavaScript. Use the Matomo JavaScript Tracking code. The common bots don't have a JavaScript engine.
 
 ## Plugin Track Spam Prevention
-Use the Matomo Plugin TrackSpamPrevention.    
-Use in this PlugIn the option `block_geoip_organisations`     
-Tutorial: https://forum.matomo.org/t/trackingspamprevention-block-isp/65362
+Use the Matomo Plugin TrackSpamPrevention.  
 
 ## Geolocation / ISP / Provider - own IP Blacklist
 Use the Matomo Geolocation in the Dashboard with this databases:
@@ -58,7 +56,10 @@ Dataport
 Vodafone Germany Business
 188.111.17.128/25
 ```
-Don't hesitate. Companys that used non-detectable bots must be blocked completelly and learn: non-detectable bots are bad and the IP ranges are blacklisted and lost.
+
+## Plugin Track Spam Prevention - ISP/ASN name Blacklist
+Use in the Matomo Plugin TrackSpamPrevention the option `block_geoip_organisations`     
+Tutorial: https://forum.matomo.org/t/trackingspamprevention-block-isp/65362
 
 ## PHP Bot Filter
 It is possible to use the Browser User Agent and the Headers to detect bot patterns.
