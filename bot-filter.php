@@ -163,6 +163,13 @@ if (array_key_exists('Accept-Language', $mtm_getallheaders_array) === true) {
 	}
 }
 
+// Header 'Accept-Language' not "undefined"
+if (array_key_exists('Accept-Language', $mtm_getallheaders_array) === true) {
+	if (trim($mtm_getallheaders_array['Accept-Language']) == "undefined") {
+		$mtm_bot_filter_bool = true;
+	}
+}
+
 // Header 'Accept-Language' - zh-CN
 // No Referer
 if (array_key_exists('Accept-Language', $mtm_getallheaders_array) === true) {
